@@ -3,7 +3,7 @@ Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
 Version:	0.0.10
-Release:	0.%{snap}.1
+Release:	0.%{snap}.2
 License:	MIT
 Group:		X11/Applications
 # git clone --depth 1 git://git.freedesktop.org/git/nouveau/xf86-video-nouveau
@@ -36,7 +36,7 @@ Requires:	xorg-xserver-libdri >= 1.3.0.0
 Requires:	xorg-xserver-libglx >= 1.3.0.0
 Requires:	xorg-xserver-server >= 1.3.0.0
 # nouveau drm
-Suggests:	kernel-video-drm
+Suggests:	kernel-gpu-drm-experimental
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
