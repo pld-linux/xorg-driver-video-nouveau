@@ -1,4 +1,4 @@
-%define	snap	20090517
+%define	snap	20090720
 Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
@@ -10,12 +10,12 @@ Group:		X11/Applications
 # cd xf86-video-nouveau
 # git archive master --prefix xf86-video-nouveau/ | bzip2 > xf86-video-nouveau-$(date +%Y%m%d).tar.bz2
 Source0:	xf86-video-nouveau-%{snap}.tar.bz2
-# Source0-md5:	03515355563bb7646b711622441ae2c9
+# Source0-md5:	1cecda134089a9a879d19f5086da910b
 URL:		http://nouveau.freedesktop.org/
 BuildRequires:	Mesa-libGL-devel
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	libdrm-devel >= 2.4.5-2
+BuildRequires:	libdrm-devel >= 2.4.12
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
@@ -31,7 +31,7 @@ BuildRequires:	xorg-proto-xf86driproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 1.3.0.0
 %requires_xorg_xserver_videodrv
-Requires:	libdrm >= 2.4.5-2
+Requires:	libdrm >= 2.4.12
 Requires:	xorg-xserver-libdri >= 1.3.0.0
 Requires:	xorg-xserver-libglx >= 1.3.0.0
 Requires:	xorg-xserver-server >= 1.3.0.0
