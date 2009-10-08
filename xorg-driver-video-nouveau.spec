@@ -1,4 +1,4 @@
-%define	snap	20091002
+%define	snap	20091008
 Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
@@ -10,7 +10,7 @@ Group:		X11/Applications
 # cd xf86-video-nouveau
 # git archive master --prefix xf86-video-nouveau/ | bzip2 > xf86-video-nouveau-$(date +%Y%m%d).tar.bz2
 Source0:	xf86-video-nouveau-%{snap}.tar.bz2
-# Source0-md5:	65a9c37963c757c2b26d8b0526db5402
+# Source0-md5:	cf121320c304656a679ef92689377c6b
 URL:		http://nouveau.freedesktop.org/
 BuildRequires:	Mesa-libGL-devel
 BuildRequires:	autoconf >= 2.57
