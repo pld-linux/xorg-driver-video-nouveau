@@ -30,12 +30,12 @@ BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xf86driproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.2
-BuildRequires:	xorg-xserver-server-devel >= 1.3.0.0
+BuildRequires:	xorg-xserver-server-devel >= 1.7.0
 %requires_xorg_xserver_videodrv
 Requires:	libdrm >= 2.4.12
-Requires:	xorg-xserver-libdri >= 1.3.0.0
-Requires:	xorg-xserver-libglx >= 1.3.0.0
-Requires:	xorg-xserver-server >= 1.3.0.0
+Requires:	xorg-xserver-libdri >= 1.7.0
+Requires:	xorg-xserver-libglx >= 1.7.0
+Requires:	xorg-xserver-server >= 1.7.0
 # nouveau drm
 Suggests:	kernel-gpu-drm-experimental
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
