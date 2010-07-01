@@ -1,9 +1,9 @@
-%define	snap	20100620
+%define	snap	20100701
 %define	rel	1
 Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
-Version:	0.0.15
+Version:	0.0.16
 Release:	0.%{snap}.%{rel}
 License:	MIT
 Group:		X11/Applications
@@ -32,12 +32,10 @@ BuildRequires:	xorg-proto-xf86driproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 1.7.0
 %requires_xorg_xserver_videodrv
-Requires:	libdrm >= 2.4.12
+Requires:	libdrm >= 2.4.21
 Requires:	xorg-xserver-libdri >= 1.7.0
 Requires:	xorg-xserver-libglx >= 1.7.0
 Requires:	xorg-xserver-server >= 1.7.0
-# nouveau drm
-Suggests:	kernel-gpu-drm-experimental
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
