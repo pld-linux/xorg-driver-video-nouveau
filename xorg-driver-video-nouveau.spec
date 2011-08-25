@@ -1,5 +1,5 @@
-%define	snap	20110326
-%define	rel	1
+%define		snap	20110326
+%define		rel		2
 Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
@@ -38,6 +38,7 @@ Requires:	xorg-lib-libpciaccess >= 0.10
 Requires:	xorg-xserver-libdri >= 1.7.0
 Requires:	xorg-xserver-libglx >= 1.7.0
 Requires:	xorg-xserver-server >= 1.7.0
+Provides:	xorg-driver-video
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
