@@ -14,10 +14,10 @@ Source0:	xf86-video-nouveau-%{snap}.tar.bz2
 # Source0-md5:	1dd6205c74736ebb28675d98c3185c83
 URL:		http://nouveau.freedesktop.org/
 BuildRequires:	Mesa-libGL-devel
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libdrm-devel >= 2.4.24
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2.0
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
 BuildRequires:	udev-devel
@@ -31,13 +31,13 @@ BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.1
 BuildRequires:	xorg-proto-xf86driproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.2
-BuildRequires:	xorg-xserver-server-devel >= 1.7.0
+BuildRequires:	xorg-xserver-server-devel >= 1.8
 %{?requires_xorg_xserver_videodrv}
 Requires:	libdrm >= 2.4.24
 Requires:	xorg-lib-libpciaccess >= 0.10
-Requires:	xorg-xserver-libdri >= 1.7.0
-Requires:	xorg-xserver-libglx >= 1.7.0
-Requires:	xorg-xserver-server >= 1.7.0
+Requires:	xorg-xserver-libdri >= 1.8
+Requires:	xorg-xserver-libglx >= 1.8
+Requires:	xorg-xserver-server >= 1.8
 Provides:	xorg-driver-video
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
