@@ -1,5 +1,5 @@
-%define	snap	20120227
-%define	rel	2
+%define	snap	20120510
+%define	rel	1
 Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
@@ -16,7 +16,7 @@ URL:		http://nouveau.freedesktop.org/
 BuildRequires:	Mesa-libGL-devel
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
-BuildRequires:	libdrm-devel >= 2.4.24
+BuildRequires:	libdrm-devel >= 2.4.34
 BuildRequires:	libtool >= 2:2.0
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
@@ -33,7 +33,7 @@ BuildRequires:	xorg-proto-xf86driproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 1.8
 %{?requires_xorg_xserver_videodrv}
-Requires:	libdrm >= 2.4.24
+Requires:	libdrm >= 2.4.34
 Requires:	xorg-lib-libpciaccess >= 0.10
 Requires:	xorg-xserver-libdri >= 1.8
 Requires:	xorg-xserver-libglx >= 1.8
