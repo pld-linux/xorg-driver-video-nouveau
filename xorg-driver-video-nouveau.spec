@@ -1,5 +1,5 @@
 %define	snap	20120510
-%define	rel	1
+%define	rel	2
 Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
