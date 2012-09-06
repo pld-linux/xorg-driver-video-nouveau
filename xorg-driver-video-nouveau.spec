@@ -3,7 +3,7 @@
 Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
-Version:	0.0.16
+Version:	1.0.1
 Release:	0.%{snap}.%{rel}
 License:	MIT
 Group:		X11/Applications
