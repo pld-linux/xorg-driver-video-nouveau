@@ -1,17 +1,13 @@
-%define	snap	20120906
 %define	rel	1
 Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
-Version:	1.0.1
-Release:	0.%{snap}.%{rel}
+Version:	1.0.2
+Release:	1
 License:	MIT
 Group:		X11/Applications
-# git clone --depth 1 git://git.freedesktop.org/git/nouveau/xf86-video-nouveau
-# cd xf86-video-nouveau
-# git archive master --prefix xf86-video-nouveau/ | bzip2 > ../xf86-video-nouveau-$(date +%Y%m%d).tar.bz2
-Source0:	xf86-video-nouveau-%{snap}.tar.bz2
-# Source0-md5:	1834b6b68665a1d017b7319a79d0cb52
+Source0:	http://nouveau.freedesktop.org/release/xf86-video-nouveau-%{version}.tar.bz2
+# Source0-md5:	31e310c9e9c9a043307462277a6aad61
 URL:		http://nouveau.freedesktop.org/
 BuildRequires:	Mesa-libGL-devel
 BuildRequires:	autoconf >= 2.60
@@ -70,7 +66,7 @@ PCI, PCI-Express i AGP oparte na następujących układach:
 - GeForce 7xxx (G70, G71, G72, G73).
 
 %prep
-%setup -q -n xf86-video-nouveau
+%setup -q -n xf86-video-nouveau-%{version}
 
 %build
 %{__libtoolize}
