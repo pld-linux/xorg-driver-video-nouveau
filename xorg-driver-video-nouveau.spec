@@ -17,7 +17,7 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
 BuildRequires:	udev-devel
 BuildRequires:	xorg-lib-libpciaccess-devel >= 0.10
-BuildRequires:	xorg-proto-dri2proto-devel
+BuildRequires:	xorg-proto-dri2proto-devel >= 2.6
 BuildRequires:	xorg-proto-fontsproto-devel
 BuildRequires:	xorg-proto-glproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
