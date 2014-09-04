@@ -1,12 +1,12 @@
 Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
-Version:	1.0.10
-Release:	4
+Version:	1.0.11
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/archive/individual/driver/xf86-video-nouveau-%{version}.tar.bz2
-# Source0-md5:	44fd65897630fdd19c086133cc1bd679
+# Source0-md5:	a0d2932d84ba10c4933c8332c9afe157
 URL:		http://nouveau.freedesktop.org/
 BuildRequires:	Mesa-libGL-devel
 BuildRequires:	autoconf >= 2.60
