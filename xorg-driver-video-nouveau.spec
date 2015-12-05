@@ -7,6 +7,7 @@ License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/archive/individual/driver/xf86-video-nouveau-%{version}.tar.bz2
 # Source0-md5:	a0d2932d84ba10c4933c8332c9afe157
+Patch0:		%{name}-dirtytracking-update.patch
 URL:		http://nouveau.freedesktop.org/
 BuildRequires:	Mesa-libGL-devel
 BuildRequires:	autoconf >= 2.60
@@ -66,6 +67,7 @@ PCI, PCI-Express i AGP oparte na następujących układach:
 
 %prep
 %setup -q -n xf86-video-nouveau-%{version}
+%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -74,6 +76,7 @@ PCI, PCI-Express i AGP oparte na następujących układach:
 %{__autoheader}
 %{__automake}
 %configure \
+	ac_cv_header_glamor_h=no \
 	--disable-silent-rules
 
 %{__make}
