@@ -47,8 +47,14 @@ PCI-Express and AGP video cards based on the following chips:
 - nForce, nForce2 (NV1A, NV1F),
 - GeForce4, QUADRO4 (NV17, NV18, NV25, NV28),
 - GeForce FX, QUADRO FX (NV30, NV31, NV34, NV35, NV36, NV37, NV38),
-- GeForce 6xxx (NV40, NV41, NV43, NV44, NV45, C51),
-- GeForce 7xxx (G70, G71, G72, G73).
+- GeForce 6xxx (NV40, NV41, NV43, NV44, NV45, C51, MCP61),
+- GeForce 7xxx (G70, G71, G72, G73, NCP67, MCP68, MCP73),
+- GeForce 8xxx (G80, G84, G86, G92, G94, G96, G98, G200, GT215, GT216,
+  GT218, MCP77, MCP79, MCP89),
+- GeForce 4xx, 5xx (GF100, GF104, GF106, GF108, GF110, GF114, GF116,
+  GF117, GF119),
+- GeForce 6xx, 7xx (GK104, GK106, GK107, GK110, GK208),
+- GeForce GTX 750 (GM107).
 
 %description -l pl.UTF-8
 Sterownik obrazu X.org dla kart graficznych NVIDIA. Obsługuje karty
@@ -61,8 +67,14 @@ PCI, PCI-Express i AGP oparte na następujących układach:
 - nForce, nForce2 (NV1A, NV1F),
 - GeForce4, QUADRO4 (NV17, NV18, NV25, NV28),
 - GeForce FX, QUADRO FX (NV30, NV31, NV34, NV35, NV36, NV37, NV38),
-- GeForce 6xxx (NV40, NV41, NV43, NV44, NV45, C51),
-- GeForce 7xxx (G70, G71, G72, G73).
+- GeForce 6xxx (NV40, NV41, NV43, NV44, NV45, C51, MCP61),
+- GeForce 7xxx (G70, G71, G72, G73, NCP67, MCP68, MCP73),
+- GeForce 8xxx (G80, G84, G86, G92, G94, G96, G98, G200, GT215, GT216,
+  GT218, MCP77, MCP79, MCP89),
+- GeForce 4xx, 5xx (GF100, GF104, GF106, GF108, GF110, GF114, GF116,
+  GF117, GF119),
+- GeForce 6xx, 7xx (GK104, GK106, GK107, GK110, GK208),
+- GeForce GTX 750 (GM107).
 
 %prep
 %setup -q -n xf86-video-nouveau-%{version}
