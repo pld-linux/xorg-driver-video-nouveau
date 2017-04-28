@@ -1,13 +1,13 @@
 Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
-Version:	1.0.14
+Version:	1.0.15
 Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/archive/individual/driver/xf86-video-nouveau-%{version}.tar.bz2
-# Source0-md5:	c57c89e1a3c9bc319d26f2e11c80e7fb
-URL:		http://nouveau.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/archive/individual/driver/xf86-video-nouveau-%{version}.tar.bz2
+# Source0-md5:	717203cb87029cddcbccf7398f9ad8c3
+URL:		https://nouveau.freedesktop.org/
 BuildRequires:	Mesa-libGL-devel
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -25,7 +25,7 @@ BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.1
 BuildRequires:	xorg-proto-xf86driproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xorg-xserver-server-devel >= 1.8
 %{?requires_xorg_xserver_videodrv}
 Requires:	libdrm >= 2.4.60
