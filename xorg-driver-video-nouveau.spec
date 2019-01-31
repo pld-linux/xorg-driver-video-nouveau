@@ -1,19 +1,19 @@
 Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
-Version:	1.0.15
-Release:	2
+Version:	1.0.16
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	https://xorg.freedesktop.org/archive/individual/driver/xf86-video-nouveau-%{version}.tar.bz2
-# Source0-md5:	717203cb87029cddcbccf7398f9ad8c3
+# Source0-md5:	ecd9be89d853301167e3d564c49f7a8e
 URL:		https://nouveau.freedesktop.org/
 BuildRequires:	Mesa-libGL-devel
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libdrm-devel >= 2.4.60
-BuildRequires:	libtool >= 2:2.0
-BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	libtool >= 2:2.2
+BuildRequires:	pkgconfig >= 1:0.24
 BuildRequires:	rpmbuild(macros) >= 1.389
 BuildRequires:	udev-devel
 BuildRequires:	xorg-lib-libpciaccess-devel >= 0.10
@@ -49,12 +49,14 @@ PCI-Express and AGP video cards based on the following chips:
 - GeForce FX, QUADRO FX (NV30, NV31, NV34, NV35, NV36, NV37, NV38),
 - GeForce 6xxx (NV40, NV41, NV43, NV44, NV45, C51, MCP61),
 - GeForce 7xxx (G70, G71, G72, G73, NCP67, MCP68, MCP73),
-- GeForce 8xxx (G80, G84, G86, G92, G94, G96, G98, G200, GT215, GT216,
-  GT218, MCP77, MCP79, MCP89),
+- GeForce 8xxx, 9xxx, 2xx, 3xx (G80, G84, G86, G92, G94, G96, G98,
+  G200, GT215, GT216, GT218, MCP77, MCP79, MCP89),
 - GeForce 4xx, 5xx (GF100, GF104, GF106, GF108, GF110, GF114, GF116,
   GF117, GF119),
 - GeForce 6xx, 7xx (GK104, GK106, GK107, GK110, GK208),
-- GeForce GTX 750 (GM107).
+- GeForce GTX 750 (GM107, GM108),
+- GeForce GTX 9xx (GM200, GM204, GM206),
+- GeForce GTX 10xx (GP102, GP104, GP106, GP107, GP108).
 
 %description -l pl.UTF-8
 Sterownik obrazu X.org dla kart graficznych NVIDIA. Obsługuje karty
@@ -69,19 +71,21 @@ PCI, PCI-Express i AGP oparte na następujących układach:
 - GeForce FX, QUADRO FX (NV30, NV31, NV34, NV35, NV36, NV37, NV38),
 - GeForce 6xxx (NV40, NV41, NV43, NV44, NV45, C51, MCP61),
 - GeForce 7xxx (G70, G71, G72, G73, NCP67, MCP68, MCP73),
-- GeForce 8xxx (G80, G84, G86, G92, G94, G96, G98, G200, GT215, GT216,
-  GT218, MCP77, MCP79, MCP89),
+- GeForce 8xxx, 9xxx, 2xx, 3xx (G80, G84, G86, G92, G94, G96, G98,
+  G200, GT215, GT216, GT218, MCP77, MCP79, MCP89),
 - GeForce 4xx, 5xx (GF100, GF104, GF106, GF108, GF110, GF114, GF116,
   GF117, GF119),
 - GeForce 6xx, 7xx (GK104, GK106, GK107, GK110, GK208),
-- GeForce GTX 750 (GM107).
+- GeForce GTX 750 (GM107, GM108),
+- GeForce GTX 9xx (GM200, GM204, GM206),
+- GeForce GTX 10xx (GP102, GP104, GP106, GP107, GP108).
 
 %prep
 %setup -q -n xf86-video-nouveau-%{version}
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
