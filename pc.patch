@@ -1,0 +1,22 @@
+--- xf86-video-nouveau-1.0.17/src/nv_driver.c~	2021-01-23 19:24:38.000000000 +0100
++++ xf86-video-nouveau-1.0.17/src/nv_driver.c	2021-11-03 16:57:15.022450372 +0100
+@@ -559,16 +559,16 @@
+ {
+ 	RegionRec pixregion;
+ 
+-	PixmapRegionInit(&pixregion, dirty->slave_dst);
++	PixmapRegionInit(&pixregion, dirty->secondary_dst);
+ 
+-	DamageRegionAppend(&dirty->slave_dst->drawable, &pixregion);
++	DamageRegionAppend(&dirty->secondary_dst->drawable, &pixregion);
+ #ifdef HAS_DIRTYTRACKING_ROTATION
+ 	PixmapSyncDirtyHelper(dirty);
+ #else
+ 	PixmapSyncDirtyHelper(dirty, &pixregion);
+ #endif
+ 
+-	DamageRegionProcessPending(&dirty->slave_dst->drawable);
++	DamageRegionProcessPending(&dirty->secondary_dst->drawable);
+ 	RegionUninit(&pixregion);
+ }
+ 
