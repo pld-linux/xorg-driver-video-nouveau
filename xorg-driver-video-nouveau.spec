@@ -1,13 +1,12 @@
 Summary:	X.org video driver for NVIDIA graphics chipsets
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych NVIDIA
 Name:		xorg-driver-video-nouveau
-Version:	1.0.17
-Release:	3
+Version:	1.0.18
+Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	https://xorg.freedesktop.org/archive/individual/driver/xf86-video-nouveau-%{version}.tar.bz2
-# Source0-md5:	b08633be9af9ee819077c278dfc55648
-Patch0:		pc.patch
+Source0:	https://xorg.freedesktop.org/archive/individual/driver/xf86-video-nouveau-%{version}.tar.xz
+# Source0-md5:	2fae526acdbda52f109c810cd0af46e7
 URL:		https://nouveau.freedesktop.org/
 BuildRequires:	Mesa-libGL-devel
 BuildRequires:	autoconf >= 2.60
@@ -16,6 +15,7 @@ BuildRequires:	libdrm-devel >= 2.4.60
 BuildRequires:	libtool >= 2:2.2
 BuildRequires:	pkgconfig >= 1:0.24
 BuildRequires:	rpmbuild(macros) >= 1.389
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	udev-devel
 BuildRequires:	xorg-lib-libpciaccess-devel >= 0.10
 BuildRequires:	xorg-proto-dri2proto-devel >= 2.6
@@ -26,14 +26,15 @@ BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.1
 BuildRequires:	xorg-proto-xf86driproto-devel
+BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
-BuildRequires:	xorg-xserver-server-devel >= 1.8
+BuildRequires:	xorg-xserver-server-devel >= 1.18
+BuildRequires:	xz
 %{?requires_xorg_xserver_videodrv}
 Requires:	libdrm >= 2.4.60
 Requires:	xorg-lib-libpciaccess >= 0.10
-Requires:	xorg-xserver-libdri >= 1.8
-Requires:	xorg-xserver-libglx >= 1.8
-Requires:	xorg-xserver-server >= 1.8
+Requires:	xorg-xserver-libglx >= 1.18
+Requires:	xorg-xserver-server >= 1.18
 Provides:	xorg-driver-video
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -83,7 +84,6 @@ PCI, PCI-Express i AGP oparte na następujących układach:
 
 %prep
 %setup -q -n xf86-video-nouveau-%{version}
-%patch0 -p1
 
 %build
 %{__libtoolize}
